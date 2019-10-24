@@ -3,7 +3,7 @@ import 'package:flame/box2d/box2d_component.dart';
 
 class Hero extends BodyComponent {
   final _radius = 8.0;
-  final _jumpForce = 8.0;
+  final _jumpForce = 80.0;
 
   Shape _shape;
   BodyDef _bodyDef;
