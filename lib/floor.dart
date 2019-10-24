@@ -36,14 +36,8 @@ class Floor extends BodyComponent {
 
   @override
   void renderPolygon(Canvas canvas, List<Offset> points) {
-    final path = Path()
-      ..addPolygon(points, true);
-    final Paint paint = Paint()
-      ..color = const Color.fromARGB(255, 255, 255, 255);
-    canvas.drawPath(path, paint);
-
     if (_animation != null) {
-      _animation.y = points[2].dy - _animation.height;
+      _animation.y = points[3].dy - _animation.height + (_height * 2);
       _animation.render(canvas);
     }
   }
